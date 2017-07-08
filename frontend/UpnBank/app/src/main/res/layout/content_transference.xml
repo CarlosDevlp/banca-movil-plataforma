@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.TransferenceActivity"
+    tools:showIn="@layout/activity_transference">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <!--cuenta de origen-->
+            <TextView
+                style="@style/UpnBank.Subtitle.FullWidth"
+                android:text="Cuenta de origen"
+                />
+
+            <Spinner
+                android:id="@+id/spn_bank_account_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_border_bottom_background"
+                android:entries="@array/arr_accounts"/>
+
+
+            <!--monto a depositar-->
+            <TextView
+                style="@style/UpnBank.Subtitle.FullWidth"
+                android:text="Monto a depositar"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Ingrese un monto">
+                <EditText
+                    android:id="@+id/edt_monto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!--cuenta de destino-->
+            <TextView
+                style="@style/UpnBank.Subtitle.FullWidth"
+                android:text="Cuenta de destino"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Ingrese una cuenta de destino">
+                <EditText
+                    android:id="@+id/edt_num_cuenta_destino"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--boton transferir-->
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/btn_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAllCaps="false"
+                android:text="Transferir"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

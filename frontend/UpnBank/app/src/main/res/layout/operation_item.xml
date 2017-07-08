@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/border_gray_strong_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/operation_item_padding"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_operation_type"
+            style="@style/UpnBank.OperationTypeText"
+            android:text="Transferencia"
+            />
+        <TextView
+            android:id="@+id/txt_operation_datetime"
+            style="@style/UpnBank.OperationDatetimeText"
+            android:text="12/12/2012"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/operation_item_padding"
+        android:layout_gravity="end"
+        >
+
+
+        <TextView
+            android:id="@+id/txt_operation_money"
+            style="@style/UpnBank.OperationMoney"
+            android:text="$/200"
+            />
+
+    </FrameLayout>
+</android.support.v7.widget.CardView>

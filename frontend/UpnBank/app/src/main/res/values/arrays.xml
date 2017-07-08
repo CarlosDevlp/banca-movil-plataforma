@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="arr_bank_account">
+        <item>12345</item>
+        <item>23451</item>
+        <item>34512</item>
+    </array>
+</resources>

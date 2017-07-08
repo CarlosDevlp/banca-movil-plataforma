@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--colores de tema-->
+    <color name="colorPrimary">#26a69a</color>
+    <color name="colorPrimaryDark">#00897b</color>
+    <color name="colorAccent">#f57f17</color>
+
+
+    <!--otros colores-->
+    <color name="soft_gray">#e1e5e9</color>
+    <color name="subtitle">#42a5f5</color>
+    <color name="account_type">#1e88e5</color>
+    <color name="card_color">#962A2A</color>
+    <color name="accent_dark">#d84315</color>
+    <color name="positive_color">@android:color/holo_green_light</color>
+    <color name="negative_color">@android:color/holo_red_light</color>
+
+</resources>

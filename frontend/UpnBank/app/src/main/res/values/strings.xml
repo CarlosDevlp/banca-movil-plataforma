@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">UpnBank</string>
+    <string name="action_settings">Settings</string>
+    <!--Api Constants-->
+    <!--http://192.168.8.103:8000/-->
+    <!--http://192.168.43.78:8000/ local-->
+    <string name="url_base">http://upnbnk.comeze.com/</string>
+
+    <!--Formulario login-->
+    <string name="str_form_password">Ingresa la clave de banca por internet</string>
+    <string name="str_form_btn_login">Ingresar</string>
+    <string name="str_card_title">Upn Bank.Card</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--Formulario main/ menu-->
+    <!--MainActivity-->
+    <string name="title_activity_main">¿Qué deseas hacer?</string>
+    <string name="str_form_btn_consult">Consultar cuentas</string>
+    <string name="str_form_btn_transference">Realizar transferencias</string>
+    <string name="str_form_btn_service_payment">Pago de servicios</string>
+    <string name="str_form_btn_attention_points">Buscar puntos de atencion</string>
+    <string name="str_form_btn_contact_us">Contáctenos</string>
+
+
+    <!--Formulario Movimientos-->
+    <!--MovementsActivity-->
+    <string name="title_activity_movements">Consulta de movimientos</string>
+    <!--Formulario de consulta de cuentas-->
+    <!--ConsultingActivity-->
+    <string name="title_activity_consulting">Consulta de cuentas</string>
+    <string name="str_from_txt_choose_bank_account">Escoja una de sus cuentas</string>
+    <!--Formulario de transferencia de efectivo-->
+    <!--TransferenceActivity-->
+    <string name="title_activity_transference">Realizar transferencia</string>
+
+    <!--Formulario de listado de servicio-->
+    <string name="title_activity_service_list">Lista de servicios</string>
+    <!--Formulario de listado de payment service-->
+    <!--PaymenServicetActivity-->
+    <string name="title_activity_paymen_servicet">Pago de servicio</string>
+
+
+
+    <!--Formulario de puntos de atención-->
+    <string name="title_activity_search_attention_point">Puntos de atención UpnBank</string>
+    <string name="str_btn_cashier">Cajeros</string>
+    <string name="str_btn_agent">Agentes</string>
+    <string name="str_btn_bank">Bancos</string>
+    <string name="str_select_attention_point_type">Elija los tipos de punto de atención que desea observar</string>
+
+    <string-array name="arr_accounts">
+        <item>12345</item>
+        <item>23451</item>
+        <item>34512</item>
+    </string-array>
+
+
+    <string-array name="arr_service_type">
+        <item>Internet</item>
+        <item>TV</item>
+        <item>Telefóno</item>
+    </string-array>
+    <string name="title_activity_maps">Puntos de atención</string>
+
+</resources>

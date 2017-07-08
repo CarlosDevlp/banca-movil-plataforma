@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_consult"
+            android:title="@string/str_form_btn_consult"/>
+        <item
+            android:id="@+id/nav_transference"
+            android:title="@string/str_form_btn_transference"/>
+        <item
+            android:id="@+id/nav_attention_points"
+            android:title="@string/str_form_btn_attention_points"/>
+        <item
+            android:id="@+id/nav_service_payment"
+            android:title="@string/str_form_btn_service_payment"/>
+        <item
+            android:id="@+id/nav_contact_us"
+            android:title="@string/str_form_btn_contact_us"/>
+        <item
+            android:id="@+id/nav_log_out"
+            android:title="Salir"/>
+    </group>
+
+</menu>
