@@ -97,10 +97,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         return super.onOptionsItemSelected(item);
     }
 
+
     private void checkUser(){
 
         String dni=mEdtDNI.getText().toString();
         String password=mEdtPassword.getText().toString();
+        //obntener usuario de base de datos
         mServiceClient.getUser(dni, password, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -141,6 +143,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    //obntener cuentas bancarias de base de datos
     private void getCuentasBancarias(){
 
         mServiceClient.getTarjetaCuentaBancaria(mUser.getId(),new Response.Listener<String>() {

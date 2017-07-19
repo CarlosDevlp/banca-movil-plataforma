@@ -44,7 +44,7 @@ public class MovementsActivity extends AppCompatActivity implements  AdapterView
     @BindView(R.id.movements_list) RecyclerView mMovementListView;
 
 
-    private ArrayList<Operacion> mOperacionList;
+    private ArrayList<Operacion> mOperacionList=new ArrayList<>();
     public static final String ARG_BANK_ACCOUNT="com.apps.carlos.upnbank.Activities.bank_account";
     private static final String LOG_TAG="MovementsActivity",LOG_TAG_ERROR="MovementsActivity-Err";
 
@@ -144,19 +144,22 @@ public class MovementsActivity extends AppCompatActivity implements  AdapterView
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        TipoOperacion selectedTipoOperacion= (TipoOperacion)adapterView.getItemAtPosition(i);
-        int idOperacion=selectedTipoOperacion.getId();
-        ArrayList<Operacion> newOperacionList=new ArrayList<>();
+        if(mOperacionList!=null && mOperacionList.size()>0) {
+            TipoOperacion selectedTipoOperacion = (TipoOperacion) adapterView.getItemAtPosition(i);
+            int idOperacion = selectedTipoOperacion.getId();
+            ArrayList<Operacion> newOperacionList = new ArrayList<>();
 
-        if(idOperacion>0) {
-            for (Operacion operacion : mOperacionList)
-                if (operacion.getIdTipoOperacion() == idOperacion)
-                    newOperacionList.add(operacion);
-        }else{
-            newOperacionList=mOperacionList;
+            if (idOperacion > 0) {
+                for (Operacion operacion : mOperacionList)
+                    if (operacion.getIdTipoOperacion() == idOperacion)
+                        newOperacionList.add(operacion);
+            } else {
+                newOperacionList = mOperacionList;
+            }
+
+            assignOperationAdapter(newOperacionList);
         }
-
-        assignOperationAdapter(newOperacionList);
+        else Log.d(LOG_TAG,"vacío");
     }
 
     @Override

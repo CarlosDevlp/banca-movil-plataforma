@@ -134,6 +134,10 @@ public class TransferenceActivity extends AppCompatActivity {
                 try {
                     Log.d(LOG_TAG,"CuentaDestino-> "+response);
                     CuentaBancaria cuentaBancaria= gson.fromJson(response, CuentaBancaria.class);
+                    cuentaBancaria.setSaldo(
+                            cuentaBancaria.getSaldo()+monto
+                    );
+
 
                     //actualizando el saldo de la cuenta destino
                     Map<String, String> updateSaldoRequestParams = new HashMap<>();
@@ -202,7 +206,7 @@ public class TransferenceActivity extends AppCompatActivity {
                 });
 
             }
-        }, new Response.ErrorListener() {
+        },  new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.d(LOG_TAG_ERROR,"error-> "+error);

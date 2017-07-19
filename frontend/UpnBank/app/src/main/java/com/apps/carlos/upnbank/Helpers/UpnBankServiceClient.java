@@ -175,7 +175,7 @@ public class UpnBankServiceClient {
     }
 
     public void updateCuentaBancariaSaldo(final Map<String, String> params, Response.Listener<String> onSuccess, Response.ErrorListener onError){
-        addRequest(new StringRequest(Request.Method.PUT,mBaseUrl+PUT_CUENTA_BANCARIA_SALDO,onSuccess,onError){
+        addRequest(new StringRequest(Request.Method.POST,mBaseUrl+PUT_CUENTA_BANCARIA_SALDO,onSuccess,onError){
             //pasar lo parámetros
             @Override
             protected Map<String, String> getParams() {

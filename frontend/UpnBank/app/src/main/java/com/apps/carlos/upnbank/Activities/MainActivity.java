@@ -11,12 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
-
 import com.apps.carlos.upnbank.Model.User;
 import com.apps.carlos.upnbank.R;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -25,14 +22,14 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
 
     @BindView(R.id.txt_username) TextView mTxtUsername;
-
+    @BindView(R.id.toolbar) Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
         //sidenav
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity
 
         //--------------------------
 
-        ButterKnife.bind(this);
+
 
         //nombre de usuario y salutación
         User user= User.getInstance();
